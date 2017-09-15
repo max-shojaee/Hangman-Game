@@ -1,0 +1,62 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	text-align: center;
+	font-size: 24px;
+	line-height: 40px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: blue; 
+}
+
+h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 800; 
+}
+
+h2{
+    font-weight: 600; 
+}
+
+.myDiv {
+    position: relative;
+    z-index: 1;
+    border: 5px solid red;
+}
+
+.myDiv .bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../images/usflag.jpg') center center;
+    background: width=100%;
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+}
+
+.letter {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    padding-bottom: 5px;
+    float: left;
+    margin: 2px;
+
+}
+
+.letter-button-color {
+    color: darkcyan;
+}
+
+#buttons {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+    text-align: center;
+}

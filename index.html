@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<Title>HANGMAN</Title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/javascript/game.js"></script>
+
+</head>
+<body>
+	<div class="myDiv">
+		<div class="bg"></div>
+		<h1><strong>HANGMAN<strong></h1>
+		<h2><strong>Enter the capital for the state of:</strong></h2>
+		<h2 id=stateNameFld><strong></strong></h2>
+		<br>
+		<p id="capitalNameFld"></p>
+		<form name="gamePad">
+			<p id="wrongLetters">Wrong Letters:</p>
+			<img src="assets/images/hangman0.png" id="hangman"><br />
+			<input name="refresh" type="button" value="New Game" onClick="location.reload()">
+			<br><br>
+		</form>
+	</div>
+	<div id="buttons"></div>
+</body>
+</html>
