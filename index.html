@@ -4,25 +4,40 @@
 	<Title>HANGMAN</Title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/javascript/game.js"></script>
 
 </head>
 <body>
-	<div class="myDiv">
-		<div class="bg"></div>
-		<h1><strong>HANGMAN<strong></h1>
-		<h2><strong>Enter the capital for the state of:</strong></h2>
-		<h2 id=stateNameFld><strong></strong></h2>
-		<br>
-		<p id="capitalNameFld"></p>
-		<form name="gamePad">
-			<p id="wrongLetters">Wrong Letters:</p>
-			<img src="assets/images/hangman0.png" id="hangman"><br />
-			<input name="refresh" type="button" value="New Game" onClick="location.reload()">
-			<br><br>
-		</form>
+	<audio id="winMusic">
+  		<source src="assets/sound/eyeoftiger.wav" type="audio/wav">
+	</audio>
+	<audio id="loseMusic">
+  		<source src="assets/sound/gameover.wav" type="audio/wav">
+	</audio>
+	<audio id="playMusic">
+  		<source src="assets/sound/pinkpanther.wav" type="audio/wav">
+	</audio>
+
+	<div class="row" id="container">
+		<div class="background"></div>
+		<div><img id="title" src="assets/images/Title.png"></div>
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6" id="content">
+				<h2>Enter the Capital for the State of: </h2>
+				<h3 id=stateNameFld></h3>
+				<p id="capitalNameFld"></p>
+				<p id="wrongLetters">Incorrect Guesses:</p>
+				<p id="remainigGuesses">Remainig Guesses:</p>
+		</div>
+		<div class="col-sm-3" id="sidecolumn">
+				<p id="wins">Wins</p>
+				<p id="losses">Losses:</p>
+				<img src="assets/images/hangman0.png" id="hangman"><br />
+		</div>
+		<input name="refresh" type="button" value="New Game" onClick="init()">
 	</div>
 	<div id="buttons"></div>
 </body>
